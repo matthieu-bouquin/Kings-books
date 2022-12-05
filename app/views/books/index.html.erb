@@ -1,3 +1,33 @@
+
+<!-- Jumbotron -->
 <%#<%= button_to "Procéder à l'abonnement", checkout_create_path(price: product.stripe_price, payment_mode: "subscription"), class: "btn btn-primary", remote: true %>
 <%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total:9.99), class: "btn btn-primary", remote: true %>
 <%#<%= link_to "Gérer mes abonnements", customer_portal_sessions_path, method: "POST" %>
+      <div class="jumbotron" style="">
+        <div class="container">
+          <h1 class="display-3">Kingsbooks</h1>
+          <h3>Regarde tes livres favoris</h3>
+        </div>
+      </div>
+
+      <!-- Actual display of events -->
+      <div class="container w-75">
+        <!-- Example row of columns -->
+        <div class="row">
+          <% @book.each do |book| %>
+            <div class="col-md-4 py-2">
+              <div class="card h-100 border-secondary">
+              <img src="https://www.echosciences-grenoble.fr/uploads/article/image/attachment/1005414294/xl_livre.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title"><%= book.name %></h2>
+                  <h5 class="card-subtitle mb-2 text-danger">Année de publication :<%= book.year %></h5>
+                  <p class="card-text"><%= book.description %></p>
+                  <p><%= link_to 'View details', book_path(:id), class: 'btn btn-info' %>
+                  
+                </div> <!-- /card-body -->
+              </div> <!-- /card -->
+            </div> <!-- /col-md-4 -->
+          <% end %>
+        </div> <!-- /row -->
+        <hr>
+      </div>

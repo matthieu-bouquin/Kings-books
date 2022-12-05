@@ -1,15 +1,35 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  background-image: url(image_nav.jpg);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-position: 10% 20%;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: lightgoldenrodyellow;}
+
+ul.topnav li a.active {background-color: lightcoral;}
+
+ul.topnav li.right {float: right;}
+
+nav {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  }
+  
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
