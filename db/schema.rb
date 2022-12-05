@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_05_115223) do
     t.text "description"
     t.string "author"
     t.integer "year"
+    t.string "url_IMG"
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
