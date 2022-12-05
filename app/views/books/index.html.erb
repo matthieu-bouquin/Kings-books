@@ -15,14 +15,15 @@
         <!-- Example row of columns -->
         <div class="row">
           <% @book.each do |book| %>
-            <div class="col-md-4 py-2">
-              <div class="card h-100 border-secondary">
-              <img src="https://www.echosciences-grenoble.fr/uploads/article/image/attachment/1005414294/xl_livre.png" class="card-img-top" alt="...">
+            <div class="col-md-4 py-2 mx-auto d-block">
+              <div class="card h-100 border-secondary text-center mx-auto d-block" style="">
+              <img src="<%= book.url_IMG %>" class="card-img-top" alt="..." style= "height: 20em;width:20em;margin-top:1em;border-radius: 15px 15px 15px 15px;border: 1px solid #000000;">
                 <div class="card-body">
                   <h2 class="card-title"><%= book.name %></h2>
-                  <h5 class="card-subtitle mb-2 text-danger">Année de publication :<%= book.year %></h5>
+                  <h5 class="card-title">Catégorie :<%= book.category_id %></h5>
+                  <h5 class="card-subtitle mb-2 text-info">Année de publication :<%= book.year %></h5>
                   <p class="card-text"><%= book.description %></p>
-                  <p><%= link_to 'View details', book_path(:id), class: 'btn btn-info' %>
+                  <p><%= link_to 'View details', book_path(book.id), class: 'btn btn-info' %>
                   
                 </div> <!-- /card-body -->
               </div> <!-- /card -->
