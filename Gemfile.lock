@@ -103,6 +103,9 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
     dotenv (2.8.1)
+dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.11.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -216,6 +219,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    stripe (8.0.0)
     table_print (1.5.7)
     thor (1.2.1)
     timeout (0.3.1)
@@ -252,8 +256,9 @@ DEPENDENCIES
   capybara
   debug
   devise
-  dotenv
+dotenv
   faker!
+  dotenv-rails
   importmap-rails
   jbuilder
   pg (~> 1.1)
@@ -263,7 +268,8 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails
   stimulus-rails
-  table_print
+stripe
+table_print
   turbo-rails
   tzinfo-data
   web-console
