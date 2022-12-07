@@ -30,12 +30,18 @@ section{
 }
 .icone-navbar{
   font-size: 2em;
-  color:black;
+  color:green;
   margin-right:1em;
+}
+.icone-navbar:hover{
+
+  color:green;
+  
 }
 .dropdown-menu{
   font-size: 10px;
 }
+
 /*Fin de la navbar */
 .heading{
   text-align: center;
@@ -51,20 +57,7 @@ section{
   color: black;
 }
 
-.btn{
-  display: inline-block;
-  margin-top: 1rem;
-  border-radius: 5rem;
-  background:#333;
-  color:#fff;
-  padding:.9rem 3.5rem;
-  cursor: pointer;
-  font-size: 1.7rem;
-}
 
-.btn:hover{
-  background:brown;
-}
 
 
 .home{
@@ -289,5 +282,10 @@ section{
   
 }
 /* Fin du bloc titre*/
-/* Debut du bloc footer */
+/* Debut du bloc formulaire devise */
+.form-group{
+  font-size:2em;
+}
+
+/* Fin du bloc formulaire devise */
 
