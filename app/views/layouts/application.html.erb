@@ -12,75 +12,19 @@
   </head>
   <body>
     <header>
-      <!--logos a gauche-->
-      <input type="checkbox" name="" id="toggler">
-      <label for="toggler" class="fas fa-bars"></label>
-      <a href="#" class="logo"> KingsBooks</a>
-      <!--- Navbar  -->
-      <nav class="#">
-        <a href="#home">home</a>
-        <a href="#books">Books</a>
-        <a href="#review">review</a>
-        <a href="#contact">contact</a>
-      </nav>
+      <center><p class="notice" style="color: green;"><%= notice %></p>
+              <p class="alert" style="color: red;"><%= alert %></p></center>
+
+      <% if user_signed_in?%>
       <%= link_to "Se déconnecter", destroy_user_session_path, style: "color:brown", method: :get %>
-      <%= link_to "Edit email / password", edit_user_registration_path %>
-      <%= link_to "Login", new_user_session_path %>
+      <% else %>
       <%= link_to "Sign up", new_user_registration_path %> 
-      <p class="notice" style="background-color: green;"><%= notice %></p>
-      <p class="alert" style="background-color: red;"><%= alert %></p>
-      <div class="icons">
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#"class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-user"></a>
-      </div>
+      <%= link_to "Sign in", new_user_session_path %>
+       <% end %>
+  
     </header>
-    <section class="home" id="home">
-    <div class="content">
-        <h3>Des marque-pages</h3>
-        <span>De toute les couleurs</span>
-        <p>Venez découvrir ces super marque pages dans notre sélection de livres faits pour vous</p>
-        <a href="#" class="btn">Abonnez-vous dès maintenant</a>
-    </div>
-</section>
-<section class="icons-container">
+    
 
-    <div class="icons">
-        <img src="images/icon-1.png" alt="">
-        <div class="info">
-            <h3>free delivery</h3>
-            <span>on all orders</span>
-        </div>
-    </div>
-
-    <div class="icons">
-        <img src="images/icon-2.png" alt="">
-        <div class="info">
-            <h3>10 days returns</h3>
-            <span>moneyback guarantee</span>
-        </div>
-    </div>
-
-    <div class="icons">
-        <img src="images/icon-3.png" alt="">
-        <div class="info">
-            <h3>offer & gifts</h3>
-            <span>on all orders</span>
-        </div>
-    </div>
-
-    <div class="icons">
-        <img src="images/icon-4.png" alt="">
-        <div class="info">
-            <h3>secure paymens</h3>
-            <span>protected by paypal</span>
-        </div>
-    </div>
-   
-</section>
-<!-- icons section ends -->
-
-<!-- prodcuts section starts  -->
 
 
 
