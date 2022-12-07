@@ -1,164 +1,220 @@
-<!-- Jumbotron -->
-<%#<%= button_to "Procéder à l'abonnement", checkout_create_path(price: product.stripe_price, payment_mode: "subscription"), class: "btn btn-primary", remote: true %>
-<%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total:9.99), class: "btn btn-primary", remote: true %>
-<%#<%= link_to "Gérer mes abonnements", customer_portal_sessions_path, method: "POST" %>
-<section class="books" id="books">
-  <h1 class="heading"> latest <span>books</span> </h1>
-  
-  <div class="box-container">$
-  <% @book.each do |book| %>
-    <div class="box">
-      <div class="image">
-        <img src="<%= book.url_IMG %>" alt="" style="width: 20em;">
-        <div class="icons">
-          <a href="#" class="fas fa-heart"></a>
-           <a href="<%= book_path(book.id) %>" class="cart-btn">Show</a>
-          <a href="#" class="fas fa-share"></a>
+<% flash.each do |type, msg| %>
+  <div class="alert <%= bootstrap_class_for_flash(type) %> alert-dismissable fade show" role="alert">
+    <%= msg %>
+  <% end %>
+</div>
+<div class="container-fluid px-0">
+  <div class="bg-image d-flex justify-content-center align-items-center img-header">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);height: 100vh; width: 100%;">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="px-4 py-5 my-5 text-center">
+          <h1 class="display-5 fw-bold">
+            <p style="color: white;">Nous avons conçu un marque-page
+            </h1>
+          </p>
+          <h3 class="display-5 fw-light">
+            <p style="color: white;">Venez découvrir notre solution dans notre sélection de livres faits pour vous
+            </h3>
+          </p>
+          <div class="col-lg-6 mx-auto">
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <a href="<%= bookmarks_path %>"><button type="button" class="btn btn-primary btn-lg px-4 gap-3">Voir notre solution</button></a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="content">
-        <h3><%= book.name %></h3>
-      </div>
-    </div>
-    <% end %>
-  </div>
- 
-</section>
-<!-- books section ends -->
-<!-- review section starts  -->
-<section class="review" id="review">
-  <h1 class="heading"> customer's <span>review</span> </h1>
-  <div class="box-container">
-    <div class="box">
-      <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-      </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
-      <div class="user">
-        <div class="user-info">
-          <h3>john deo</h3>
-          <span>happy customer</span>
-        </div>
-      </div>
-      <span class="fas fa-quote-right"></span>
-    </div>
-    <div class="box">
-      <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-      </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
-      <div class="user">
-        <div class="user-info">
-          <h3>john deo</h3>
-          <span>happy customer</span>
-        </div>
-      </div>
-      <span class="fas fa-quote-right"></span>
-    </div>
-    <div class="box">
-      <div class="stars">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-      </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
-      <div class="user">
-        <div class="user-info">
-          <h3>john deo</h3>
-          <span>happy customer</span>
-        </div>
-      </div>
-      <span class="fas fa-quote-right"></span>
     </div>
   </div>
-</section>
-<!--------------------------------------------- Footer --------------------------------------------------------->
-<footer class="text-center text-lg-start bg-white text-muted">
-  <hr>
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row lg-12">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3 text-secondary"></i>E-kittens
-          </h6>
+  <section class="icons-container text-center">
+    <div class="icons">
+      <div class="info">
+        <i class="fa-solid fa-shop-lock"style="font-size:4em;text-align:center;"></i>
+        <h3>10 days returns</h3>
+        <span>Money back guarantee</span>
+      </div>
+    </div>
+    <div class="icons">
+      <img src="images/icon-3.png" alt="">
+      <div class="info">
+        <h3>offer & gifts</h3>
+        <span>on all orders</span>
+      </div>
+    </div>
+    <div class="icons text-center">
+      <div class="info">
+        <i class="fa-brands fa-stripe" style="font-size:4em;text-align:center;"></i>
+        <h3>Secure payments</h3>
+        <span>Protected by Stripe</span>
+      </div>
+    </div>
+  </section>
+  <%#<%= button_to "Procéder à l'abonnement", checkout_create_path(price: product.stripe_price, payment_mode: "subscription"), class: "btn btn-primary", remote: true %>
+  <%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total:9.99), class: "btn btn-primary", remote: true %>
+  <%#<%= link_to "Gérer mes abonnements", customer_portal_sessions_path, method: "POST" %>
+  <section class="books" id="books">
+    <h1 class="heading"> Tester notre solution </h1>
+    <div class="box-container">
+      <% @book.each do |book| %>
+        <div class="box" style ="border-radius: 20px 20px 20px 20px;">
+          <div class="image">
+            <img src="<%= book.url_IMG %>" alt="" style="width: 20em;">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="<%= book_path(book.id) %>" class="cart-btn">Show</a>
+              <a href="#" class="fas fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3><%= book.name %></h3>
+          </div>
         </div>
-        <!-- Grid column -->
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            user
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">mon compte</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Mon panier</a>
-          </p>
+      <% end %>
+    </div>
+  </section>
+  <!-- books section ends -->
+  <!-- review section starts  -->
+  <section class="review" id="review">
+    <h1 class="heading"> customer's <span>review</span> </h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
         </div>
-        <!-- Grid column -->
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            team
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">sarah</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">jonathan</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">kevin</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">jerry</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">mamoun</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">matthieu</a>
-          </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+        <div class="user">
+          <div class="user-info">
+            <h3>john deo</h3>
+            <span>happy customer</span>
+          </div>
         </div>
-        <!-- Grid column -->
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3 text-secondary"></i> FRANCE</p>
-          <p>
-            <i class="fas fa-envelope me-3 text-secondary"></i>
-            info@example.com
-          </p>
-          <p><i class="fas fa-phone me-3 text-secondary"></i>+01.02.03.04.05</p>
+        <span class="fas fa-quote-right"></span>
+      </div>
+      <div class="box">
+        <div class="stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+        <div class="user">
+          <div class="user-info">
+            <h3>john deo</h3>
+            <span>happy customer</span>
+          </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+      </div>
+      <div class="box">
+        <div class="stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+        <div class="user">
+          <div class="user-info">
+            <h3>john deo</h3>
+            <span>happy customer</span>
+          </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #45526e"
+          >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold" style ="font-weight: bold;font-size: 1.5em;">
+              Kings Books
+            </h6>
+            <p style ="font-size: 1.2em;">
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold"style ="font-weight: bold;font-size: 1.5em;">Products</h6>
+            <p>
+              <a class="text-white" style ="font-size: 1.2em;">Bookmark</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold" style ="font-weight: bold;font-size: 1.5em;">
+              Useful links
+            </h6>
+            <p>
+              <a class="text-white" style ="font-size: 1.2em;">Your Account</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold footer-titre-col" style ="font-weight: bold;font-size: 1.5em;">Contact</h6>
+            <p><i class="fas fa-envelope mr-3" style ="font-size: 1.3em;"></i> kings.books.mailer@gmail.com</p>
+          </div>
           <!-- Grid column -->
         </div>
-        <!-- Grid row -->
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+      <hr class="my-3">
+      <!-- Section: Copyright -->
+      <section class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3" style="font-size:1.5em;">
+              © 2020 Copyright:
+              <a class="text-white" href="https://github.com/JonathanSchafeitel/Kings-books"
+                 >Kingsbooks</a
+                >
+            </div>
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+            <!-- Github -->
+            <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+               role="button"
+               ><i class="fa-brands fa-github"></i></i
+              ></a>
+        </div>
+        <!-- Grid column -->
       </div>
     </section>
+    <!-- Section: Copyright -->
   </div>
-  <!-- Section: Links  -->
-  <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-    retrouvez notre repo github:
-    <a class="text-reset fw-bold" href="https://github.com/JonathanSchafeitel/e-kittens">e-kittens</a>
-  </div>
-  <!-- Copyright -->
+  <!-- Grid container -->
 </footer>
+<!-- Footer -->
 <!-- Footer -->
