@@ -1,5 +1,8 @@
 class User < ApplicationRecord
-  after_create :create_stripe_customer
+ # after_create :create_stripe_customer
+  #after_create :create_bookmark
+
+ has_many :bookmarks
   def create_stripe_customer
     customer = Stripe::Customer.create({
       email: self.email,
