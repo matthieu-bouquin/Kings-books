@@ -109,6 +109,11 @@ GEM
     erubi (1.11.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    gon (6.4.0)
+      actionpack (>= 3.0.20)
+      i18n (>= 0.7)
+      multi_json
+      request_store (>= 1.0)
     htmlbeautifier (1.4.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -135,20 +140,25 @@ GEM
     mini_mime (1.1.2)
     minitest (5.16.3)
     msgpack (1.6.0)
+    multi_json (1.15.0)
     net-imap (0.3.1)
       net-protocol
     net-pop (0.1.2)
       net-protocol
-    net-protocol (0.2.0)
+    net-protocol (0.2.1)
       timeout
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.9-x86_64-linux)
+    nokogiri (1.13.10-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pdf-core (0.9.0)
     pg (1.4.5)
-    public_suffix (5.0.0)
+    prawn (2.4.0)
+      pdf-core (~> 0.9.0)
+      ttfunk (~> 1.7)
+    public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.1)
@@ -185,6 +195,8 @@ GEM
     regexp_parser (2.6.1)
     reline (0.3.1)
       io-console (~> 0.5)
+    request_store (1.5.1)
+      rack (>= 1.4)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -224,6 +236,7 @@ GEM
     table_print (1.5.7)
     thor (1.2.1)
     timeout (0.3.1)
+    ttfunk (1.7.0)
     turbo-rails (1.3.2)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
@@ -260,10 +273,12 @@ DEPENDENCIES
   dotenv
   dotenv-rails
   faker!
+  gon
   htmlbeautifier
   importmap-rails
   jbuilder
   pg (~> 1.1)
+  prawn
   puma (~> 5.0)
   rails (~> 7.0.4)
   rspec-rails

@@ -10,15 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_06_102739) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_08_195325) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "book_pages", force: :cascade do |t|
+    t.text "pageOne"
+    t.text "pageTwo"
+    t.text "pageThree"
+    t.text "pageFour"
+    t.text "pageFive"
+    t.text "pageSix"
+    t.bigint "book_id"
+    t.index ["book_id"], name: "index_book_pages_on_book_id"
+  end
+
   create_table "bookmarks", force: :cascade do |t|
     t.string "name"
-    t.float "price"
+    t.integer "current_page"
+    t.bigint "book_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_bookmarks_on_book_id"
+    t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
   create_table "books", force: :cascade do |t|
@@ -28,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102739) do
     t.integer "year"
     t.string "url_IMG"
     t.bigint "category_id"
+    t.integer "current_page"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_books_on_category_id"
@@ -48,13 +64,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_102739) do
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "plan"
+    t.string "stripe_customer_id"
+    t.string "session_token"
+    t.string "string"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.bigint "bookmarks_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["bookmarks_id"], name: "index_users_on_bookmarks_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["stripe_customer_id"], name: "index_users_on_stripe_customer_id", unique: true
   end
 
 end
