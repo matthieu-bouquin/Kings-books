@@ -16,7 +16,7 @@
             <p class="card-text" style="font-size:2em;">Catégorie : <%= @book.category_id %></p>
             <p class="card-text" style="font-size:2em;"><%= @book.year %></p>
             <p class="card-text"style="font-size:1.5em;"><%= @book.description %></p>
-            <%= content_tag :div, '', id: "bookmark", data: {source: @bookmark.current_page}%>
+            
             <p class="card-text"><small class="text-muted"><%=  %></small></p>
             <div class="container text-center" style="margin-top:15em;">
               <%= form_for :bookmark, url: bookmark_path(@book), method: :patch,:html => { :style => 'font-size:2.5em;', :class => 'justify-content-center align-items-center'} do |bookmark| %>
@@ -112,7 +112,7 @@
       }
 
 
-    var test = <%= @bookmark.current_page %>
+
 
 
     console.log(form.value)
