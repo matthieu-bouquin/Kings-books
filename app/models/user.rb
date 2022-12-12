@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  after_create :create_stripe_customer
+ # after_create :create_stripe_customer
   def create_stripe_customer
     customer = Stripe::Customer.create({
       email: self.email,
@@ -17,4 +17,10 @@ class User < ApplicationRecord
   def welcome_send
     UserMailer.welcome_email(self).deliver_now
   end
+
+#this part belongs to chatbot commited by jerry
+scope :all_except, -> (user) {where.not(id: user)}
+after_create_commit { broadcast_append_to "users"}
+has_many :messages
+
 end

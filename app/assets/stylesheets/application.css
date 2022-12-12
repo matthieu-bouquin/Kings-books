@@ -1,35 +1,380 @@
-body {margin: 0;}
 
-ul.topnav {
-  list-style-type: none;
-  background-image: url(image_nav.jpg);
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-position: 10% 20%;
-}
-
-ul.topnav li {float: left;}
-
-ul.topnav li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
+*{
+  margin:0; padding:0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none; border:none;
   text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: lightgoldenrodyellow;}
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
 
-ul.topnav li a.active {background-color: lightcoral;}
+section{
+  padding:2rem 9%;
+}
+/*Debut de la navbar */
+.navbar-brand{
+  font-size: 40px;
+  margin-left:1em;
+}
+.nav-link{
+  font-size: 20px;
+  margin-left:1em;
+}
+.icone-navbar{
+  font-size: 2em;
+  color:green;
+  margin-right:1em;
+}
+.icone-navbar:hover{
 
-ul.topnav li.right {float: right;}
+  color:green;
+  
+}
+.dropdown-menu{
+  font-size: 10px;
+}
 
-nav {
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+/*Fin de la navbar */
+.heading{
+  text-align: center;
+  font-size: 4rem;
+  color:#333;
+  padding:1rem;
+  margin:2rem 0;
+  background:rgba(255, 51, 153,.05);
+  border-radius: 20px 20px 20px 20px;
+}
+
+.heading span{
+  color: black;
+}
+
+
+
+
+.home{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background:url(https://www.roffeypark.ac.uk/wp-content/uploads/2018/06/the-7-best-books-to-improve-influencing-skills-2-scaled.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
+}
+.img-header{
+  background-size: cover;
+  background-image: url('https://www.roffeypark.ac.uk/wp-content/uploads/2018/06/the-7-best-books-to-improve-influencing-skills-2-scaled.jpg');
+  height: 100vh;
+}
+
+.home .content{
+  max-width: 50rem;
+}
+
+.home .content h3{
+  font-size: 4.5rem;
+  color:black;
+}
+
+.home .content span{
+  font-size: 3.5rem;
+  color:black;
+  padding:1rem 0;
+  line-height: 1.5;
+}
+
+.home .content p{
+  font-size: 1.5rem;
+  color:black;
+  padding:1rem 0;
+  line-height: 1.5;
+}
+
+.icons-container{
+  background:#eee;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.icons-container .icons{
+  background:#fff;
+  border:.1rem solid rgba(0,0,0,.1);
+  padding:2rem;
+  display: flex;
+  align-items: center;
+  flex:1 1 25rem;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.icons-container .icons img{
+  height:5rem;
+  margin-right: 2rem;
+}
+
+.icons-container .icons h3{
+  color:#333;
+  padding-bottom: .5rem;
+  font-size: 1.5rem;
+}
+
+.icons-container .icons span{
+  color:#555;
+  font-size: 1.3rem;
+}
+/* Debut du bloc cards books*/
+.books .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.books .box-container .box{
+  flex:1 1 30rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  position: relative;    
+}
+
+
+.books .box-container .box .image{
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  overflow:hidden;
+}
+
+.booksts .box-container .box .image img{
+  height:25rem;
+}
+
+.books .box-container .box:hover .image img{
+  transform: scale(1.1);
+}
+
+.books .box-container .box .image .icons{
+  position: absolute;
+  bottom:-7rem; left:0; right:0;
+  display: flex;
+}
+
+.books .box-container .box:hover .image .icons{
+  bottom:0;
+}
+
+.books .box-container .box .image .icons a{
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  width:50%;
+  background:black;
+  color:#fff;
+}
+
+.books .box-container .box .image .icons .cart-btn{
+  border-left: .1rem solid #fff7;
+  border-right: .1rem solid #fff7;
+  width:100%;
+}
+
+.books .box-container .box .image .icons a:hover{
+  background:#333;
+}
+
+.books .box-container .box .content{
+  padding:2rem;
+  text-align: center;
+}
+
+.books .box-container .box .content h3{
+  font-size: 2.5rem;
+  color:#333;
+}
+/* Fin du bloc cards books*/
+/* Debut du bloc reviews*/
+
+.review .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.review .box-container .box{
+  flex:1 1 30rem;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+  padding:3rem 2rem;
+  position: relative;
+  border:.1rem solid rgba(0,0,0,.1);
+}
+
+.review .box-container .box .fa-quote-right{
+  position: absolute;
+  bottom:3rem; right:3rem;
+  font-size: 6rem;
+  color:#eee;
+}
+
+.review .box-container .box .stars i{
+  color:gold;
+  font-size: 2rem;
+}
+
+.review .box-container .box p{
+  color:#999;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding-top: 2rem;
+}
+
+.review .box-container .box .user{
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.review .box-container .box .user img{
+  height:6rem;
+  width:6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.review .box-container .box .user h3{
+  font-size: 2rem;
+  color:#333;
+}
+
+.review .box-container .box .user span{
+  font-size: 1.5rem;
+  color:#999;
+}
+/* Fin du bloc reviews*/
+/* Début du bloc titre*/
+  .home .content h3{
+      font-size: 5rem;
+  }
+
+  .home .content span{
+      font-size: 2.5rem;
+  }
+
+  .icons-container .icons h3{
+      font-size: 2rem;
   }
   
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
+  .icons-container .icons span{
+      font-size: 1.7rem;
+  }
+  
+
+/* Fin du bloc titre*/
+/* Debut du bloc formulaire devise */
+.form-group{
+  font-size:2em;
 }
+
+/* Fin du bloc formulaire devise */
+
+
+
+
+/* This belongs to chatbot */
+/* Start of css chatbot  */
+
+body {
+
+  overflow-y: hidden;
+}
+
+.msg-form {
+
+  width: 100%;
+  height: 56px;
+  padding: 10px;
+}
+#single_room {
+
+  height: calc(100vh - 150px);
+  
+}
+
+#messages {
+
+  height: calc(100vh - 150px);
+  margin-right: 0px !important;
+ 
+
+}
+
+
+.roomform {
+
+  margin-left: 40px;
+}
+
+#room_container {
+
+  height: 100vh;
+  margin-right: 0px !important;
+  float: right;
+
+}
+
+#slide_panel {
+
+  height: 100vh;
+  margin-right: 0px !important;
+  overflow-x: hidden;
+  overflow: scroll;
+  margin-bottom: 55px;
+
+
+}
+
+.msg-content {
+
+  width: 80%;
+  margin-right: 5px;
+}
+
+.message-box {
+
+  word-wrap: break-word;
+  width: fit-content;
+  max-width: 40%;
+  padding: 5%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(34, 19, 1);
+  padding: 10px;
+}
+
+.usermsg {
+
+  word-wrap: break-word;
+  width: fit-content;
+  max-width: 40%;
+  padding: 5%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(23, 105, 212);
+  padding: 10px;
+  float: right;
+
+}
+
+/* End of css chatbot */
