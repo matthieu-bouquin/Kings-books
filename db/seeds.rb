@@ -14,14 +14,21 @@ Category.create(genre: "Contes")
 Category.create(genre: "Romans et nouvelles")
 Category.create(genre: "Théâtre")
 
-b = Book.create(name: "conte et nouvelles", 
+book1 = Book.create(name: "conte et nouvelles", 
             description: "Contes et nouvelles en vers est un recueil de divers contes et nouvelles grivois, recueillis et versifiés par Jean de La Fontaine et publiés en trois parties par Claude Barbin, en 1665, 1666 et 1671." ,
             author: "jean de la fontaine", 
             year: 1665, 
             url_IMG: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Wegener_Conte_La_Fontaine_I_frontispice.jpg/375px-Wegener_Conte_La_Fontaine_I_frontispice.jpg", 
             category_id: 19,
             current_page: 0)
-BookPage.create(book_id: b.id,
+book2 = Book.create(name: "La Fille aux yeux d’or", 
+              description: "Contes et nouvelles en vers est un recueil de divers contes et nouvelles grivois, recueillis et versifiés par Jean de La Fontaine et publiés en trois parties par Claude Barbin, en 1665, 1666 et 1671." ,
+              author: "Honoré de Balzac", 
+              year: 1835, 
+              url_IMG: "https://static.fnac-static.com/multimedia/Images/FR/NR/fd/dc/6c/7134461/1540-1/tsp20221009062124/La-Fille-aux-yeux-d-or.jpg", 
+              category_id: 19,
+              current_page: 0)
+BookPage.create(book_id: book1.id,
   pageOne: 
     "J’avais résolu de ne consentir à l’impression de ces contes,
     qu’après que j’y pourrais joindre ceux de Boccace, qui sont le
@@ -209,4 +216,151 @@ BookPage.create(book_id: b.id,
       Tous deux dormaient : dans cet abord, Joconde
       Voulut les envoyer dormir en l’autre monde :
       Mais cependant il n’en fit rien ;")
+BookPage.create(book_id: book2.id,
+      pageOne: 
+          "Un des spectacles où se rencontre le plus
+          d’épouvantement est certes l’aspect général de la
+          population parisienne, peuple horrible à voir,
+          hâve, jaune, tanné. Paris n’est-il pas un vaste
+          champ incessamment remué par une tempête
+          d’intérêts sous laquelle tourbillonne une moisson
+          d’hommes que la mort fauche plus souvent
+          qu’ailleurs et qui renaissent toujours aussi serrés,
+          dont les visages contournés, tordus, rendent par
+          tous les pores l’esprit, les désirs, les poisons dont
+          sont engrossés leurs cerveaux ; non pas des
+          visages, mais bien des masques : masques de
+          faiblesse, masques de force, masques de misère,
+          masques de joie, masques d’hypocrisie ; tous
+          exténués, tous empreints des signes ineffaçables
+          d’une haletante avidité ? Que veulent-ils ? De
+          l’or, ou du plaisir ?
+          Quelques observations sur l’âme de Paris
+          peuvent expliquer les causes de sa physionomie
+          cadavéreuse qui n’a que deux âges, ou la jeunesse
+          ou la caducité : jeunesse blafarde et sans couleur,",
+      pageTwo: 
+          "caducité fardée qui veut paraître jeune. En voyant
+          ce peuple exhumé, les étrangers qui ne sont pas
+          tenus de réfléchir, éprouvent tout d’abord un
+          mouvement de dégoût pour cette capitale, vaste
+          atelier de jouissances, d’où bientôt eux-mêmes ils
+          ne peuvent sortir, et restent à s’y déformer
+          volontiers. Peu de mots suffiront pour justifier
+          physiologiquement la teinte presque infernale des
+          figures parisiennes, car ce n’est pas seulement par
+          plaisanterie que Paris a été nommé un enfer.
+          Tenez ce mot pour vrai. Là, tout fume, tout brûle,
+          tout brille, tout bouillonne, tout flambe,
+          s’évapore, s’éteint, se rallume, étincelle, pétille et
+          se consume. Jamais vie en aucun pays ne fut plus
+          ardente, ni plus cuisante. Cette nature sociale
+          toujours en fusion semble se dire après chaque
+          œuvre finie : – À une autre ! comme se le dit la
+          nature elle-même. Comme la nature, cette nature
+          sociale s’occupe d’insectes, de fleurs d’un jour,
+          de bagatelles, d’éphémères, et jette aussi feu et
+          flamme par son éternel cratère. Peut-être avant
+          d’analyser les causes qui font une physionomie
+          spéciale à chaque tribu de cette nation intelligente
+          et mouvante, doit-on signaler la cause générale", 
+      pageThree:
+          "qui en décolore, blêmit, bleuit et brunit plus ou
+          moins les individus.
+          À force de s’intéresser à tout, le Parisien finit
+          par ne s’intéresser à rien. Aucun sentiment ne
+          dominant sur sa face usée par le frottement, elle
+          devient grise comme le plâtre des maisons qui a
+          reçu toute espèce de poussière et de fumée. En
+          effet, indifférent la veille à ce dont il s’enivrera le
+          lendemain, le Parisien vit en enfant quel que soit
+          son âge. Il murmure de tout, se console de tout,
+          se moque de tout, oublie tout, veut tout, goûte à
+          tout, prend tout avec passion, quitte tout avec
+          insouciance ; ses rois, ses conquêtes, sa gloire,
+          son idole, qu’elle soit de bronze ou de verre ;
+          comme il jette ses bas, ses chapeaux et sa fortune.
+          À Paris, aucun sentiment ne résiste au jet des
+          choses, et leur courant oblige à une lutte qui
+          détend les passions : l’amour y est un désir, et la
+          haine une velléité ; il n’y a là de vrai parent que
+          le billet de mille francs, d’autre ami que le Montde-Piété. Ce laisser-aller général porte ses fruits ;
+          et, dans le salon, comme dans la rue, personne
+          n’y est de trop, personne n’y est absolument utile,
+          ni absolument nuisible : les sots et les fripons,",
+      pageFour:
+            "comme les gens d’esprit ou de probité. Tout y est
+            toléré, le gouvernement et la guillotine, la
+            religion et le choléra. Vous convenez toujours à
+            ce monde vous n’y manquez jamais. Qui donc
+            domine en ce pays sans mœurs, sans croyance,
+            sans aucun sentiment ; mais d’où partent et où
+            aboutissent tous les sentiments, toutes les
+            croyances et toutes les mœurs ? L’or et le plaisir.
+            Prenez ces deux mots comme une lumière et
+            parcourez cette grande cage de plâtre, cette ruche
+            à ruisseaux noirs, et suivez-y les serpenteaux de
+            cette pensée qui l’agite, la soulève, la travaille ?
+            Voyez. Examinez d’abord le monde qui n’a rien ?
+            L’ouvrier, le prolétaire, l’homme qui remue
+            ses pieds, ses mains, sa langue, son dos, son seul
+            bras, ses cinq doigts pour vivre ; eh ! bien celui-là
+            qui, le premier, devrait économiser le principe de
+            sa vie, il outrepasse ses forces, attelle sa femme à
+            quelque machine, use son enfant et le cloue à un
+            rouage. Le fabricant, le je ne sais quel fil
+            secondaire dont le branle agite ce peuple qui, de
+            ses mains sales, tourne et dore les porcelaines,
+            coud les habits et les robes, amincit le fer,
+            amenuise le bois, tisse l’acier, solidifie le chanvre",
+      pageFive:
+            "et le fil, satine les bronzes, festonne le cristal,
+            imite les fleurs, brode la laine, dresse les
+            chevaux, tresse les harnais et les galons, découpe
+            le cuivre, peint les voitures, arrondit les vieux
+            ormeaux, vaporise le coton, souffle les tulles,
+            corrode le diamant, polit les métaux, transforme
+            en feuilles le marbre, lèche les cailloux, toilette la
+            pensée, colore, blanchit et noircit tout ; hé ! bien,
+            ce sous-chef est venu promettre à ce monde de
+            sueur et de volonté, d’étude et de patience, un
+            salaire excessif, soit au nom des caprices de la
+            ville, soit à la voix du monstre nommé
+            Spéculation. Alors ces quadrumanes se sont mis à
+            veiller, pâtir, travailler jurer, jeûner, marcher ;
+            tous se sont excédés pour gagner cet or qui les
+            fascine. Puis, insouciants de l’avenir, avides de
+            jouissances, comptant sur leurs bras comme le
+            peintre sur sa palette, ils jettent, grands seigneurs
+            d’un jour, leur argent le lundi dans les cabarets,
+            qui font une enceinte de boue à la ville ; ceinture
+            de la plus impudique des Vénus, incessamment
+            pliée et dépliée, où se perd comme au jeu la
+            fortune périodique de ce peuple, aussi féroce au
+            plaisir qu’il est tranquille au travail. Pendant cinq",
+      pageSix:
+            "jours donc, aucun repos pour cette partie
+            agissante de Paris ! Elle se livre à des
+            mouvements qui la font se gauchir, se grossir,
+            maigrir, pâlir, jaillir en mille jets de volonté
+            créatrice. Puis son plaisir, son repos est une
+            lassante débauche, brune de peau, noire de tapes,
+            blême d’ivresse, ou jaune d’indigestion qui ne
+            dure que deux jours, mais qui vole le pain de
+            l’avenir, la soupe de la semaine, les robes de la
+            femme, les langes de l’enfant tous en haillons.
+            Ces hommes, nés sans doute pour être beaux, car
+            toute créature a sa beauté relative, se sont
+            enrégimentés, dès l’enfance, sous le
+            commandement de la force, sous le règne du
+            marteau, des cisailles, de la filature, et se sont
+            promptement vulcanisées. Vulcain, avec sa
+            laideur et sa force, n’est-il pas l’emblème de cette
+            laide et forte nation, sublime d’intelligence
+            mécanique, patiente à ses heures, terrible un jour
+            par siècle, inflammable comme la poudre, et
+            préparée à l’incendie révolutionnaire par l’eaude-vie, enfin assez spirituelle pour prendre feu
+            sur un mot captieux qui signifie toujours pour
+            elle : or et plaisir ! En comprenant tous ceux qui
+            ")
     
