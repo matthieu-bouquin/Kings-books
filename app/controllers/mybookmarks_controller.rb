@@ -25,13 +25,15 @@ class MybookmarksController < ApplicationController
       bookmark.name = @book.name
       bookmark.save
       end
-      redirect_back fallback_location: root_path, success: "Ton marque page sur le livre '#{@book.name}' a été enregristré à la page  #{@current_page}"
+      redirect_back fallback_location: root_path, success: "Your bookmark on the book '#{@book.name}' has been recorded on page
+
+      #{@current_page}"
     else
       p "*."*100
       p "je suis dans le else"
       p "*."*100
       @bookmark = Bookmark.create(name: @book.name,current_page: @current_page, book_id: @book.id, user_id: current_user.id )
-      redirect_back fallback_location: root_path, success: "Ton marque page sur le livre '#{@book.name}' a été enregristré à la page  #{@current_page}"
+      redirect_back fallback_location: root_path, success: "Your bookmark on the book  #{@current_page}"
     end
   end
   def new
@@ -47,7 +49,7 @@ class MybookmarksController < ApplicationController
     @bookmark = Bookmark.find_by(id: @id)
     @bookmark.destroy
     
-    redirect_to mybookmarks_path, success: "Marque page supprimé avec succès"
+    redirect_to mybookmarks_path, success: "Bookmark deleted successfully"
   end
   private
   def paramsClean
