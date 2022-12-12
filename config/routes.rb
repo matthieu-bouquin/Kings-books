@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :news
   resources :abouts
   resources :book_page
+  resources :mybookmarks
   resources :customer_portal_sessions, only: [:create]
   scope '/checkout' do
     post 'create', to: 'checkout#create', as: 'checkout_create'

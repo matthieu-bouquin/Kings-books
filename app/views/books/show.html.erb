@@ -19,7 +19,7 @@
             
             <p class="card-text"><small class="text-muted"><%=  %></small></p>
             <div class="container text-center" style="margin-top:15em;">
-              <%= form_for :bookmark, url: bookmark_path(@book), method: :patch,:html => { :style => 'font-size:2.5em;', :class => 'justify-content-center align-items-center'} do |bookmark| %>
+              <%= form_for :bookmark, url: mybookmark_path(@book), method: :patch,:html => { :style => 'font-size:2.5em;', :class => 'justify-content-center align-items-center'} do |bookmark| %>
                 Page actuelle : <%= bookmark.text_field :current_page, id:'form' %>
                 <%= bookmark.submit class: 'btn btn-outline-warning btn-lg btn-form' %>
               <% end %>
