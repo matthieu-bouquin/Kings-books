@@ -22,12 +22,19 @@ book1 = Book.create(name: "conte et nouvelles",
             category_id: 19,
             current_page: 0)
 book2 = Book.create(name: "La Fille aux yeux d’or", 
-              description: "Contes et nouvelles en vers est un recueil de divers contes et nouvelles grivois, recueillis et versifiés par Jean de La Fontaine et publiés en trois parties par Claude Barbin, en 1665, 1666 et 1671." ,
+              description: "Il met en scène le comte Henri de Marsay, dandy fat, fils de Lord Dudley et de la marquise de Vordac, qui l'abandonnent pour qu'il soit éduqué par un prêtre. Très bel homme, il est un séducteur invétéré qui a la réputation de rendre toutes les femmes folles d'amour. Il est l'un des Treize qu’on trouve dans La Duchesse de Langeais et Ferragus." ,
               author: "Honoré de Balzac", 
               year: 1835, 
               url_IMG: "https://static.fnac-static.com/multimedia/Images/FR/NR/fd/dc/6c/7134461/1540-1/tsp20221009062124/La-Fille-aux-yeux-d-or.jpg", 
               category_id: 19,
               current_page: 0)
+book3 = Book.create(name: "Alice au pays des merveilles", 
+                description: "Les Aventures d'Alice au pays des merveilles (titre original : Alice's Adventures in Wonderland), fréquemment abrégé en Alice au pays des merveilles, est un roman publié en 1865 par Lewis Carroll. Il a été traduit en français pour la première fois en 1869 par la même maison d'édition (Macmillan and Co)" ,
+                author: "Lewis Carroll", 
+                year: 1865, 
+                url_IMG: "https://static.fnac-static.com/multimedia/Images/FR/NR/f5/f9/55/5634549/1540-1/tsp20140401180133/Alice-au-pays-des-merveilles.jpg", 
+                category_id: 19,
+                current_page: 0)
 BookPage.create(book_id: book1.id,
   pageOne: 
     "J’avais résolu de ne consentir à l’impression de ces contes,
@@ -363,4 +370,134 @@ BookPage.create(book_id: book2.id,
             sur un mot captieux qui signifie toujours pour
             elle : or et plaisir ! En comprenant tous ceux qui
             ")
-    
+BookPage.create(book_id: book3.id,
+              pageOne: 
+                "Alice commençait à se sentir très lasse de rester assise à
+                côté de sa sœur, sur le talus, et de n’avoir rien à faire : une fois
+                ou deux, elle avait jeté un coup d’œil sur le livre que lisait sa
+                sœur ; mais il ne contenait ni images ni dialogues : « Et,
+                pensait Alice, à quoi peut bien servir un livre où il n’y a ni
+                images ni dialogues ? »
+                Alice au pays des merveilles - Descente dans le terrier du lapin
+                – 5 –
+                Elle se demandait (dans la mesure où elle était capable de
+                réfléchir, car elle se sentait tout endormie et toute stupide à
+                cause de la chaleur) si le plaisir de tresser une guirlande de
+                pâquerettes valait la peine de se lever et d’aller cueillir les
+                pâquerettes, lorsque, brusquement, un Lapin Blanc aux yeux
+                roses passa en courant tout près d’elle.",
+              pageTwo: 
+                "Ceci n’avait rien de particulièrement remarquable ; et
+                Alice ne trouva pas non plus tellement bizarre d’entendre le
+                Lapin se dire à mi-voix : « Oh, mon Dieu ! Oh, mon Dieu ! Je
+                vais être en retard ! » (Lorsqu’elle y réfléchit par la suite, il lui
+                vint à l’esprit qu’elle aurait dû s’en étonner, mais, sur le
+                moment, cela lui sembla tout naturel) ; cependant, lorsque le
+                Lapin tira bel et bien une montre de la poche de son gilet,
+                Alice au pays des merveilles - Descente dans le terrier du lapin
+                – 6 –
+                regarda l’heure, et se mit à courir de plus belle, Alice se dressa
+                d’un bond, car, tout à coup, l’idée lui était venue qu’elle
+                n’avait jamais vu de lapin pourvu d’une poche de gilet, ni
+                d’une montre à tirer de cette poche. Dévorée de curiosité, elle
+                traversa le champ en courant à sa poursuite, et eut la chance
+                d’arriver juste à temps pour le voir s’enfoncer comme une
+                flèche dans un large terrier placé sous la haie.
+                Un instant plus tard, elle y pénétrait à son tour, sans se
+                demander une seule fois comment diable elle pourrait bien en
+                sortir.", 
+              pageThree:
+                "Le terrier était d’abord creusé horizontalement comme
+                un tunnel, puis il présentait une pente si brusque et si raide
+                qu’Alice n’eut même pas le temps de songer à s’arrêter avant
+                de se sentir tomber dans un puits apparemment très profond.
+                Soit que le puits fût très profond, soit que Alice tombât
+                très lentement, elle s’aperçut qu’elle avait le temps, tout en
+                descendant, de regarder autour d’elle et de se demander ce
+                qui allait se passer. D’abord, elle essaya de regarder en bas
+                pour voir où elle allait arriver, mais il faisait trop noir pour
+                qu’elle pût rien distinguer. Ensuite, elle examina les parois du
+                puits, et remarqua qu’elles étaient garnies de placards et
+                d’étagères ; par endroits, des cartes de géographie et des
+                tableaux se trouvaient accrochés à des pitons. En passant, elle
+                prit un pot sur une étagère ; il portait une étiquette sur
+                laquelle on lisait : MARMELADE D’ORANGES, mais, à la
+                grande déception d’Alice, il était vide. Elle ne voulut pas le
+                laisser tomber de peur de tuer quelqu’un et elle s’arrangea
+                pour le poser dans un placard devant lequel elle passait, tout
+                en tombant.
+                Alice au pays des merveilles - Descente dans le terrier du lapin
+                – 7 –
+                « Ma foi ! songea-t-elle, après une chute pareille, cela me
+                sera bien égal, quand je serai à la maison, de dégringoler dans
+                l’escalier ! Ce qu’on va me trouver courageuse ! Ma parole,
+                même si je tombais du haut du toit, je n’en parlerais à
+                personne ! » (Supposition des plus vraisemblables, en effet.)",
+              pageFour:
+                  "Plus bas, encore plus bas, toujours plus bas. Est-ce que
+                  cette chute ne finirait jamais ? « Je me demande combien de
+                  kilomètres j’ai pu parcourir ? dit-elle à haute voix. Je ne dois
+                  pas être bien loin du centre de la terre. Voyons : cela ferait
+                  Alice au pays des merveilles - Descente dans le terrier du lapin
+                  – 8 –
+                  une chute de six à sept mille kilomètres, du moins je le
+                  crois… (car, voyez-vous, Alice avait appris en classe pas mal
+                  de choses de ce genre, et, quoique le moment fût mal choisi
+                  pour faire parade de ses connaissances puisqu’il n’y avait
+                  personne pour l’écouter, c’était pourtant un bon exercice que
+                  de répéter tout cela)… Oui, cela doit être la distance exacte…
+                  mais, par exemple, je me demande à quelle latitude et à quelle
+                  longitude je me trouve ? » (Alice n’avait pas la moindre idée
+                  de ce qu’était la latitude, pas plus d’ailleurs que la longitude,
+                  mais elle jugeait que c’étaient de très jolis mots,
+                  impressionnants à prononcer.)
+                  ",
+              pageFive:
+                  "Bientôt, elle recommença : « Je me demande si je vais
+                  traverser la terre d’un bout à l’autre ! Cela sera rudement
+                  drôle d’arriver au milieu de ces gens qui marchent la tête en
+                  bas ! On les appelle les Antipattes1
+                  , je crois – (cette fois, elle
+                  fut tout heureuse de ce qu’il n’y eût personne pour écouter,
+                  car il lui sembla que ce n’était pas du tout le mot qu’il fallait)
+                  – mais, je serai alors obligée de leur demander quel est le nom
+                  du pays, bien sûr. S’il vous plaît, madame, suis-je en
+                  Nouvelle-Zélande ou en Australie ? (et elle essaya de faire la
+                  révérence tout en parlant – imaginez ce que peut être la
+                  révérence pendant qu’on tombe dans le vide ! Croyez-vous
+                  que vous en seriez capable ?) Et la dame pensera que je suis
+                  une petite fille ignorante ! Non, il vaudra mieux ne rien
+                  demander ; peut-être que je verrai le nom écrit quelque
+                  part. »",
+              pageSix:
+                  "Plus bas, encore plus bas, toujours plus bas. Comme il
+                  n’y avait rien d’autre à faire, Alice se remit bientôt à parler.
+                  « Je vais beaucoup manquer à Dinah ce soir, j’en ai bien
+                  peur ! (Dinah était sa chatte.) J’espère qu’on pensera à lui
+                  donner sa soucoupe de lait à l’heure du thé. Ma chère Dinah,
+                  comme je voudrais t’avoir ici avec moi ! Il n’y a pas de souris
+                  dans l’air, je le crains fort, mais tu pourrais attraper une
+                  chauve-souris, et cela, vois-tu, cela ressemble beaucoup à une
+                  souris. Mais est-ce que les chats mangent les chauves-souris ?
+                  Je me le demande. » À ce moment, Alice commença à se
+                  sentir toute somnolente, et elle se mit à répéter, comme si elle
+                  rêvait : « Est-ce que les chats mangent les chauves-souris ?
+                  Est-ce que les chats mangent les chauves-souris ? » et parfois :
+                  « Est-ce que les chauves-souris mangent les chats ? » car,
+                  voyez-vous, comme elle était incapable de répondre à aucune
+                  des deux questions, peu importait qu’elle posât l’une ou
+                  l’autre. Elle sentit qu’elle s’endormait pour de bon, et elle
+                  venait de commencer à rêver qu’elle marchait avec Dinah, la
+                  main dans la patte, en lui demandant très sérieusement :
+                  « Allons, Dinah, dis-moi la vérité : as-tu jamais mangé une
+                  chauve-souris ? » quand, brusquement, patatras ! elle atterrit
+                  sur un tas de branchages et de feuilles mortes, et sa chute prit
+                  fin.
+                  Alice ne s’était pas fait le moindre mal, et fut sur pied en
+                  un moment ; elle leva les yeux, mais tout était noir au-dessus
+                  de sa tête. Devant elle s’étendait un autre couloir où elle vit le
+                  Lapin Blanc en train de courir à toute vitesse. Il n’y avait pas
+                  un instant à perdre : voilà notre Alice partie, rapide comme le
+                  vent. Elle eut juste le temps d’entendre le Lapin dire, en
+                  tournant un coin : « Par mes oreilles et mes moustaches,
+                  comme il se fait tard ! » Elle tourna le coin à son tour")
