@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   resources :contacts
   resources :news
   resources :abouts
-  resources :customer_portal_sessions, only: [:create] 
+  resources :book_page
+  resources :mybookmarks
+  resources :customer_portal_sessions, only: [:create]
   scope '/checkout' do
     post 'create', to: 'checkout#create', as: 'checkout_create'
     get 'success', to: 'checkout#success', as: 'checkout_success'

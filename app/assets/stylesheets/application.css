@@ -5,8 +5,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   outline: none; border:none;
   text-decoration: none;
-  text-transform: capitalize;
-  transition: .2s linear;
+     
 }
 
 html{
@@ -292,6 +291,7 @@ section{
 
 
 
+
 /* This belongs to chatbot */
 /* Start of css chatbot  */
 
@@ -378,3 +378,127 @@ body {
 }
 
 /* End of css chatbot */
+
+
+
+.btn-form {
+  font-size: 1.5em;
+}
+/* index de bookmark */
+
+
+.form button {
+  color:white;
+  background:rgba(0,0,0,.5);
+  padding: 0 10px;
+  border-radius: 0;
+}
+
+.div-main-bookmark{
+  padding-top: 50px;
+  padding-right: 10%;
+  background: white;
+  padding-left: 7%;
+}
+
+
+.preview img{
+  position: relative;
+  left: -60px;
+}
+
+.parameter{
+  padding-top: 70px;
+}
+
+.parameter h6{
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.parameter h1{
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-top: -20px;
+}
+.parameter p{
+  color: black;
+}
+
+.parameter h5{
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.parameter h5 span{
+  letter-spacing: 0;
+  color: #a8a8a8;
+  font-size: 0.8em;
+}
+
+.parameter h2{
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.parameter h2 span{
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.btn-card{
+  margin-top:20px;
+}
+
+.btn-card button{
+  padding: 15px 20px;
+  background: black;
+  color: white;
+  border-radius: 0;
+  margin-left: 10px;
+  
+}
+.col-xl-9{
+  margin-left: 20%;
+  padding-top: 6%;
+  padding-left: 10%;
+}
+
+.ppp-border{
+  margin-top: 10%;
+  width: 100%;
+  height: 0;
+  background-color: pink;
+  height: 2px;
+}
+
+.ppp-border p{
+  width: 100%;
+  padding-top: 5%;
+  text-align: justify;
+}
+
+.txt-center {
+  margin-top: 1%;
+  border: 3px solid pink;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.content-books{
+  background:  lightgreen;
+  margin-right: 5%;
+  padding-bottom: 5%; 
+}
+
+.second-part{
+  width: 100%;
+  height: 100%;
+}
+
+.video{
+padding-bottom: 5%;
+}
+

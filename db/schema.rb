@@ -14,6 +14,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_09_120457) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "book_pages", force: :cascade do |t|
+    t.text "pageOne"
+    t.text "pageTwo"
+    t.text "pageThree"
+    t.text "pageFour"
+    t.text "pageFive"
+    t.text "pageSix"
+    t.bigint "book_id"
+    t.index ["book_id"], name: "index_book_pages_on_book_id"
+  end
+
   create_table "bookmarks", force: :cascade do |t|
     t.string "name"
     t.float "price"

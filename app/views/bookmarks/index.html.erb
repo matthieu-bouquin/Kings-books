@@ -1,1 +1,145 @@
-<p> Hello depuis le boomarks index </p>
+<main class ="div-main-bookmark">
+  <div class="container-fluid">
+    <div class="row no-gutters">
+      <div class="col-xl-7">
+        <div class="content-books">
+          <div class="col-xl-9 preview">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9ba9fbd6-bd95-4a79-a949-d24421e1b588/d2u0k9i-164191ac-6144-4683-a72a-c845ab8acfca.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzliYTlmYmQ2LWJkOTUtNGE3OS1hOTQ5LWQyNDQyMWUxYjU4OFwvZDJ1MGs5aS0xNjQxOTFhYy02MTQ0LTQ2ODMtYTcyYS1jODQ1YWI4YWNmY2EuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.oA02Yr3dtGkAf3hvDJEkBJVEilmFMBuo73ABmC0TO0U" class="img-fluid" width="400px" id="pr" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-5">
+        <div class="parameter">
+          <h1 class="display">Marque-pages</h1>
+          <br>
+          <h6>Service de location</h6>
+          <hr>
+          <div class="detail">
+            <h5>Par l'équipe de THP</h5>
+          </div>
+          <hr>
+          <br>
+          <div class="price">
+            <h2><span><sup>$</sup></span>8,99/<sup>month</sup></h2>
+          </div>
+          <div class="btn-card">
+            <div class="row">
+              <a href ="<%= checkout_create_path(total:9.99) %>"></a><button class="btn">ADD TO CART</button>
+              <%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total:9.99), class: "btn btn-primary", remote: true %>
+            </div>
+          </div>
+          <div class="ppp-border container">
+            <h6>
+              <p>La lecture est un art qui ne doit pas être dérangé. Plutot que de passer son temps à essayer de trouver où l'on s'est arrêté, l'équipe de THP a mis en place un système de marque-pages. Celui-ci permet à tous les passionnés de lecture de sauvegarder l'endroit où ils s'arrêtent et leur permettre ainsi de se replonger dans leurs lectures. Ce système est sous forme d'abonnement, différents prix vous sont proposés afin d'en profiter un maximum.</p>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="arrow">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="second-part container">
+    <div class="txt-center">
+      <p>
+        <h2>Pour plus d'informations, visionnez la vidéo ci-dessous.</h2>
+      </p>
+    </div>
+  </div>
+  <div class="video">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/GoxhRQqKtXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</main>
+<!-- Footer -->
+<footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #45526e"
+          >
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold" style ="font-weight: bold;font-size: 1.5em;">
+            Kings Books
+          </h6>
+          <p style ="font-size: 1.2em;">
+            Here you can use rows and columns to organize your footer
+            content. Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none" />
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold"style ="font-weight: bold;font-size: 1.5em;">Products</h6>
+          <p>
+            <a class="text-white" style ="font-size: 1.2em;">Bookmark</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none" />
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold" style ="font-weight: bold;font-size: 1.5em;">
+            Useful links
+          </h6>
+          <p>
+            <a class="text-white" style ="font-size: 1.2em;">Your Account</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+        <hr class="w-100 clearfix d-md-none" />
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h6 class="text-uppercase mb-4 font-weight-bold footer-titre-col" style ="font-weight: bold;font-size: 1.5em;">Contact</h6>
+          <p><i class="fas fa-envelope mr-3" style ="font-size: 1.3em;"></i> kings.books.mailer@gmail.com</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+    <hr class="my-3">
+    <!-- Section: Copyright -->
+    <section class="p-3 pt-0">
+      <div class="row d-flex align-items-center">
+        <!-- Grid column -->
+        <div class="col-md-7 col-lg-8 text-center text-md-start">
+          <!-- Copyright -->
+          <div class="p-3" style="font-size:1.5em;">
+            © 2022 Copyright:
+            <a class="text-white" href="https://github.com/JonathanSchafeitel/Kings-books"
+                 >Kingsbooks</a
+                >
+          </div>
+          <!-- Copyright -->
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+          <!-- Github -->
+          <a
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+               role="button"
+               ><i class="fa-brands fa-github"></i></i
+              ></a>
+      </div>
+      <!-- Grid column -->
+    </div>
+  </section>
+  <!-- Section: Copyright -->
+</div>
+<!-- Grid container -->
+</footer>

@@ -1,84 +1,210 @@
-<!DOCTYPE html>
-<html>
-    
-    <head>
-
-        <title>Kingsbooks</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <%= csrf_meta_tags %>
-        <%= csp_meta_tag %>
-        <script src="https://js.stripe.com/v3/"></script>
-        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-        <%= javascript_importmap_tags %>
-
-    </head>
-
-
-    <body>
-        
-        <header>
+<div>
+  <% flash.each do |type, msg| %>
+    <div class="alert <%= bootstrap_class_for_flash(type) %> alert-dismissable fade show" style="font-size:2em;" role="alert">
+      <%= msg %>
+    <% end %>
+  </div>
+  <main>
+    <div class="card mb-3" style="margin-left:10em;margin-right:10em;margin-top:1em;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="<%= @book.url_IMG %>" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title" style="font-size:3em;"><%= @book.name.capitalize %></h5>
+            <p class="card-text" style="font-size:2em;">Catégorie : <%= @book.category_id %></p>
+            <p class="card-text" style="font-size:2em;"><%= @book.year %></p>
+            <p class="card-text"style="font-size:1.5em;"><%= @book.description %></p>
             
-            <!--logos a gauche-->
-            <input type="checkbox" name="" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label>
-            <a href="#" class="logo"> KingsBooks</a>
-            <!--- Navbar  -->
-            <nav class="#">
-                <a href="#home">home</a>
-                <a href="#books">Books</a>
-                <a href="#review">review</a>
-                <a href="#contact">contact</a>
-            </nav>
-            <%= link_to "Se déconnecter", destroy_user_session_path, style: "color:brown", method: :get %>
-            <%= link_to "Edit email / password", edit_user_registration_path %>
-            <%= link_to "Login", new_user_session_path %>
-            <%= link_to "Sign up", new_user_registration_path %> 
-            <p class="notice" style="background-color: green;"><%= notice %></p>
-            <p class="alert" style="background-color: red;"><%= alert %></p>
-            <div class="icons">
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#"class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-user"></a>
+            <p class="card-text"><small class="text-muted"><%=  %></small></p>
+            <div class="container text-center" style="margin-top:15em;">
+              <%= form_for :bookmark, url: mybookmark_path(@book), method: :patch,:html => { :style => 'font-size:2.5em;', :class => 'justify-content-center align-items-center'} do |bookmark| %>
+              Current page : <%= bookmark.text_field :current_page, id:'form' %>
+                <%= bookmark.submit class: 'btn btn-outline-warning btn-lg btn-form' %>
+              <% end %>
             </div>
-        
-        </header>
-
-        <main>
-            
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="/app/assets/images/livre.png" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <div class="row align-items-center">
+        <div class="col">
+          <button type="button" id ="Page1" class="btn btn-primary" style= "font-size: 2rem;">Page 1</button>
+          <%= content_tag :div, '', id: "variablePage1", data: {source: @page.pageOne}%>
+        </div>
+        <div class="col">
+          <button type="button" id ="Page2" class="btn btn-primary" style= "font-size: 2rem;">Page 2</button>
+          <%= content_tag :div, '', id: "variablePage2", data: {source: @page.pageTwo}%>
+        </div>
+        <div class="col">
+          <button type="button" id ="Page3" class="btn btn-primary" style= "font-size: 2rem;">Page 3</button>
+          <%= content_tag :div, '', id: "variablePage3", data: {source: @page.pageThree}%>
+        </div>
+        <div class="col">
+          <button type="button" id ="Page4" class="btn btn-primary" style= "font-size: 2rem;">Page 4</button>
+          <%= content_tag :div, '', id: "variablePage4", data: {source: @page.pageFour}%>
+        </div>
+        <div class="col">
+          <button type="button" id ="Page5" class="btn btn-primary" style= "font-size: 2rem;">Page 5</button>
+          <%= content_tag :div, '', id: "variablePage5", data: {source: @page.pageFive}%>
+        </div>
+        <div class="col">
+          <button type="button" id ="Page6" class="btn btn-primary" style= "font-size: 2rem;">Page 6</button>
+          <%= content_tag :div, '', id: "variablePage6", data: {source: @page.pageSix}%>
+        </div>
+        <div class="container-fluid" style="">
+          <div class="card mb-3 text-center" style="margin-left:10em;margin-right:10em;margin-top:1em;">
+            <div class="row">
+              <div class="col">
+                <div class="card-body" style="">
+                  <p id="textBookTitle" style="font-size:3em;">Page 1</p>
+                  <p id="textBook" style="font-size:2em;"></p>
                 </div>
+              </div>
             </div>
-            <div class="container">
-                <div class="row row-grid justify-content-around align-items-center">
-                 <div class="col-lg-5 order-lg-2">
-                   <div class="pr-lg-4">
-                     <p class="h3">soundsystem</p>
-                     <p class="lead mt-4 mb-5">voila voila </p>
-                   </div>
-                 </div>
-                 <div class="col-lg-6 order-lg-1">
-                   <img alt="Image placeholder" src="img/pexels-lukas-306088.jpg" class="img-fluid img-center">
-                 </div>
-               </div>
-               </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+  </footer>
+  <script>
+    var btn_page1 = document.getElementById("Page1");
+    var btn_page2 = document.getElementById("Page2");
+    var btn_page3 = document.getElementById("Page3");
+    var btn_page4 = document.getElementById("Page4");
+    var btn_page5 = document.getElementById("Page5");
+    var btn_page6 = document.getElementById("Page6");
 
-            
-        </main>
+    var textBookTitle = document.getElementById("textBookTitle");
+    var textBook = document.getElementById("textBook");
 
-        <footer>
+    var pageOneContent = document.getElementById("variablePage1").dataset.source
+    var pageTwoContent = document.getElementById("variablePage2").dataset.source
+    var pageThreeContent = document.getElementById("variablePage3").dataset.source
+    var pageFourContent = document.getElementById("variablePage4").dataset.source
+    var pageFiveContent = document.getElementById("variablePage5").dataset.source
+    var pageSixContent = document.getElementById("variablePage6").dataset.source
 
-        </footer>
-    </body>
-</html>
+
+
+
+    var form = document.getElementById("form")
+
+
+  
+
+
+    console.log(form.value)
+    if (form.value === 1){
+      textBook.innerHTML = pageOneContent;
+      } else if (form.value === 2){
+        textBook.innerHTML = pageTwoContent;
+        console.log(form.value);
+      } else if (form.value === 3){
+        textBook.innerHTML = pageThreeContent;
+        console.log(form.value)
+      } else {
+        console.log("else")
+      }
+
+
+
+
+
+    console.log(form.value)
+
+    var current_page = 1
+
+    textBook.innerHTML = pageOneContent
+
+    btn_page1.addEventListener("click", function(){
+           textBook.innerHTML = pageOneContent;
+           textBookTitle.innerHTML = "Page 1"
+           btn_page1.style.background = 'green'
+           btn_page2.style.background = 'blue'
+           btn_page3.style.background = 'blue'
+           btn_page4.style.background = 'blue'
+           btn_page5.style.background = 'blue'
+           btn_page6.style.background = 'blue'
+           current_page = 1
+           form.value = current_page
+           console.log(current_page)
+
+
+
+       });
+    btn_page2.addEventListener("click", function(){
+           textBook.innerHTML = pageTwoContent;
+           textBookTitle.innerHTML = "Page 2"
+           btn_page2.style.background = 'green'
+           btn_page1.style.background = 'blue'
+           btn_page3.style.background = 'blue'
+           btn_page4.style.background = 'blue'
+           btn_page5.style.background = 'blue'
+           btn_page6.style.background = 'blue'
+           current_page = 2
+           form.value = current_page
+           console.log(current_page)
+
+       });
+     btn_page3.addEventListener("click", function(){
+           textBook.innerHTML = pageThreeContent;
+           textBookTitle.innerHTML = "Page 3"
+           btn_page3.style.background = 'green'
+           btn_page1.style.background = 'blue'
+           btn_page2.style.background = 'blue'
+           btn_page4.style.background = 'blue'
+           btn_page5.style.background = 'blue'
+           btn_page6.style.background = 'blue'
+           current_page = 3
+           form.value = current_page
+           console.log(current_page)
+
+       });
+       btn_page4.addEventListener("click", function(){
+           textBook.innerHTML = pageFourContent;
+           textBookTitle.innerHTML = "Page 4"
+           btn_page4.style.background = 'green'
+           btn_page3.style.background = 'blue'
+           btn_page1.style.background = 'blue'
+           btn_page2.style.background = 'blue'
+           btn_page5.style.background = 'blue'
+           btn_page6.style.background = 'blue'
+           current_page = 4
+           form.value = current_page
+           console.log(current_page)
+
+       });
+       btn_page5.addEventListener("click", function(){
+           textBook.innerHTML = pageFiveContent;
+           textBookTitle.innerHTML = "Page 5"
+           btn_page5.style.background = 'green'
+           btn_page3.style.background = 'blue'
+           btn_page1.style.background = 'blue'
+           btn_page2.style.background = 'blue'
+           btn_page4.style.background = 'blue'
+           btn_page6.style.background = 'blue'
+           current_page = 5
+           form.value = current_page
+           console.log(current_page)
+
+       });
+       btn_page6.addEventListener("click", function(){
+           textBook.innerHTML = pageSixContent;
+           textBookTitle.innerHTML = "Page 6"
+           btn_page5.style.background = 'blue'
+           btn_page3.style.background = 'blue'
+           btn_page1.style.background = 'blue'
+           btn_page2.style.background = 'blue'
+           btn_page4.style.background = 'blue'
+           btn_page6.style.background = 'green'
+           current_page = 6
+           form.value = current_page
+           console.log(current_page)
+
+       });
+  </script>

@@ -1,3 +1,4 @@
+
 class TurboFailureApp < Devise::FailureApp
   def respond
     if request_format == :turbo_stream
@@ -11,7 +12,6 @@ class TurboFailureApp < Devise::FailureApp
     %w(html turbo_stream */*).include? request_format.to_s
   end
 end
-
 
 # frozen_string_literal: true
 
@@ -34,6 +34,7 @@ Devise.setup do |config|
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
+ 
   config.parent_controller = 'TurboDeviseController'
   
   # ...
@@ -51,6 +52,7 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   end
+
 
 
   # ==> Mailer Configuration
@@ -301,6 +303,7 @@ Devise.setup do |config|
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :get
 
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.

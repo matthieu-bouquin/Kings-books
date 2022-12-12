@@ -1,0 +1,10 @@
+<div class="container text-center">
+<iframe src=<%= @book.content %> width="1000" height="780" style="border: none;"> </iframe>
+<h1><%= @book.name %></h1>
+<h2><%= @book.author %></h2>
+<h3><%= @book.year %></h3>
+<p style="font-size:1.5em;"><%=  %></p>
+
+<%= link_to "pdf", book_pdf_path(@book) %>
+
+</div>
