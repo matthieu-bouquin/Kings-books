@@ -14,7 +14,7 @@ Category.create(genre: "Contes")
 Category.create(genre: "Romans et nouvelles")
 Category.create(genre: "Théâtre")
 
-book1 = Book.create(name: "conte et nouvelles", 
+book1 = Book.create(name: "Conte et nouvelles", 
             description: "Contes et nouvelles en vers est un recueil de divers contes et nouvelles grivois, recueillis et versifiés par Jean de La Fontaine et publiés en trois parties par Claude Barbin, en 1665, 1666 et 1671." ,
             author: "jean de la fontaine", 
             year: 1665, 
