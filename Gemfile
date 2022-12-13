@@ -9,6 +9,7 @@ gem 'dotenv-rails'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 gem "table_print"
 gem 'dotenv'
+gem 'rails-i18n'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 gem 'htmlbeautifier'
