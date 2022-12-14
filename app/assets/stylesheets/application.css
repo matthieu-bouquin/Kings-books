@@ -407,3 +407,29 @@ section{
 .video{
 padding-bottom: 5%;
 }
+
+
+.nav-item:hover{
+  background-color: rgba(89,62,22,0.5);
+border: none;
+  border-radius: 30px;
+}
+
+.card-body{
+
+ text-align: justify;
+
+ margin: 3em;
+
+ letter-spacing: 3px;
+
+}
+
+  
+
+.card-body #textBookTitle:hover{
+
+ color: rgba(89,62,22,0.5);
+
+}
+
