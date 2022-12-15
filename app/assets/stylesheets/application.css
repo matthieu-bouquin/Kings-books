@@ -97,41 +97,9 @@ section{
   line-height: 1.5;
 }
 
-.icons-container{
-  background:#eee;
-  display: flex;
-  flex-wrap: wrap;
-  gap:1.5rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
 
-.icons-container .icons{
-  background:#fff;
-  border:.1rem solid rgba(0,0,0,.1);
-  padding:2rem;
-  display: flex;
-  align-items: center;
-  flex:1 1 25rem;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-}
 
-.icons-container .icons img{
-  height:5rem;
-  margin-right: 2rem;
-}
 
-.icons-container .icons h3{
-  color:#333;
-  padding-bottom: .5rem;
-  font-size: 1.5rem;
-}
-
-.icons-container .icons span{
-  color:#555;
-  font-size: 1.3rem;
-}
 /* Debut du bloc cards books*/
 .books .box-container{
   display: flex;
@@ -279,7 +247,7 @@ section{
       font-size: 1.7rem;
   }
   
-}
+
 /* Fin du bloc titre*/
 /* Debut du bloc formulaire devise */
 .form-group{
@@ -407,3 +375,29 @@ section{
 .video{
 padding-bottom: 5%;
 }
+
+
+.nav-item:hover{
+  background-color: rgba(89,62,22,0.5);
+border: none;
+  border-radius: 30px;
+}
+
+.card-body{
+
+ text-align: justify;
+
+ margin: 3em;
+
+ letter-spacing: 3px;
+
+}
+
+  
+
+.card-body #textBookTitle:hover{
+
+ color: rgba(89,62,22,0.5);
+
+}
+
