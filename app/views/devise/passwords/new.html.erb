@@ -1,5 +1,6 @@
 <center>
-<div class="col-md-10" style="margin: auto;">
+<br><br><br><br>
+<div class="col-md-8" style="margin: auto;">
 <div class="card">
   <div class="card-header">
   
@@ -9,14 +10,14 @@
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
+<br>
   <div class="field form-group">
-    <%= f.label :email %><br /><br>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"Email" %>
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", placeholder:"Email", style:"font-size:0.8em;"%>
   </div>
 <br>
   <div class="actions">
-    <%= f.submit "Send me reset password instructions", class:"btn btn-secondary" %>
+    <%= f.submit "Send me reset password instructions", class:"btn btn-secondary" , style:"font-size:1.5em;" %>
   </div>
 <% end %>
 </div>
