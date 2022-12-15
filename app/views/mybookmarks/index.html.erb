@@ -57,7 +57,7 @@
                             <!-- star -->
                             <td> # <%= bookmark.id %></a></td>
                           <td>
-                            <span class="mb-0 "><a href="<%= book_path(id: bookmark.book_id) %>"><%= bookmark.name.capitalize %></a></span>
+                            <span class="mb-0 "><a href="<%= book_path(id: bookmark.book_id, page: bookmark.current_page) %>"><%= bookmark.name.capitalize %></a></span>
                           </td>
                           <!-- Current Page -->
                           <td>

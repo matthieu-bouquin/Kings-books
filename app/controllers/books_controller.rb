@@ -7,11 +7,12 @@ class BooksController < ApplicationController
     @book = Book.all
   end
   
-  def show 
+  def show
+    p params
     @book = Book.find(params[:id])
     @page = BookPage.find_by(book_id: @book.id)
-    if Bookmark.find_by(id: current_user.id)
-      @bookmark = Bookmark.find_by(id: current_user.id)
+    if Bookmark.find_by(user_id: current_user.id)
+      @bookmark = Bookmark.find_by(user_id: current_user.id, book_id: @book.id)
     end
   end
 
@@ -21,11 +22,6 @@ class BooksController < ApplicationController
   end
 
   def update
-    p "*"*100
-    p "update controller"
-    p "*"*100
-    p params
-    p "*"*100
   end
   def new
   end
