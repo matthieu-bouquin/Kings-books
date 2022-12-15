@@ -1,1 +1,126 @@
-<p> Hello from contact index </p>
+<div class="container">
+  <% flash.each do |type, msg| %>
+    <div class="alert <%= bootstrap_class_for_flash(type) %> alert-dismissable fade show" role="alert">
+      <%= msg %>
+    <% end %>
+  </div>
+  <main>
+    <div class="container" style="margin-bottom:5em;margin-top:5em;">
+      <div class="row" >
+        <div class="col-md-6 m-auto">
+          <div class="heading">
+            <h1>Contact us</h1>
+          </div>
+          <%= form_for @contact, html: { class: "form-signin mt-3" } do |f| %>
+            <div class="form-group">
+              <%= f.label :email, "Email" %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", style:"font-size:0.8em;" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :name, "Name" %><br />
+              <%= f.text_field :name, autofocus: true, autocomplete: "Name", class: "form-control", style:"font-size:0.8em;" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :subject, "Subject" %><br />
+              <%= f.text_field :subject, autofocus: true, autocomplete: "subject", class: "form-control", style:"font-size:0.8em;" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :content, "Content" %><br />
+              <%= f.text_area :content, autofocus: true, autocomplete: "Content", class: "form-control", style:"font-size:0.8em;" %>
+            </div>
+            <div class="actions mt-5">
+              <%= f.submit "Send message", class: "btn btn-lg btn-primary btn-block", style:"font-size:1.5em;" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+   <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white container-fluid"
+          style="background-color: #45526e"
+          >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold" style ="font-weight: bold;font-size: 1.5em;">
+              Kings Books
+            </h6>
+            <p style ="font-size: 1.2em;">
+              Reading is an art that should not be disturbed. Rather than spending time trying to find where we left off, the THP team implemented a bookmark system.
+            </p>
+          </div>
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold"style ="font-weight: bold;font-size: 1.5em;">Products</h6>
+            <p>
+              <a href ="<%= bookmarks_path %>"class="text-white" style ="font-size: 1.2em;">Bookmark</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold" style ="font-weight: bold;font-size: 1.5em;">
+              Teams
+            </h6>
+            <p><a href="https://github.com/JonathanSchafeitel" class="text-white" style ="font-size: 1.2em;">Jonathan Schafeitel</a></p>
+            <p><a href="https://github.com/klt56" class="text-white" style ="font-size: 1.2em;">Kevin Letourneur</a></p>
+            <p><a href="https://github.com/Sarahmela93" class="text-white" style ="font-size: 1.2em;">Sarah Melaikia</a></p>
+            <p><a href="https://github.com/matthieu-bouquin" class="text-white" style ="font-size: 1.2em;">Matthieu Bourquin</a></p>
+            <p><a href="https://github.com/jerryfarwell" class="text-white" style ="font-size: 1.2em;">Jerry Farwell</a></p>
+          </div>
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold footer-titre-col" style ="font-weight: bold;font-size: 1.5em;">Contact</h6>
+            <p><i class="fas fa-envelope mr-3" style ="font-size: 1.3em;"></i><a href="mailto:kings.books.mailer@gmail.com" style="text-decoration:none;color:white;"> kings.books.mailer@gmail.com</a></p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+      <hr class="my-3">
+      <!-- Section: Copyright -->
+      <section class="p-3 pt-0">
+        <div class="row d-flex align-items-center">
+          <!-- Grid column -->
+          <div class="col-md-7 col-lg-8 text-center text-md-start">
+            <!-- Copyright -->
+            <div class="p-3" style="font-size:1.5em;">
+              © 2022 Copyright:
+              <a class="text-white" href="https://github.com/JonathanSchafeitel/Kings-books">Kingsbooks</a>
+            </div>
+            <!-- Copyright -->
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+            <!-- Github -->
+            <a href ="https://github.com/JonathanSchafeitel/Kings-books"
+               class="btn btn-outline-light btn-floating m-1"
+               class="text-white"
+               role="button"
+               ><i class="fa-brands fa-github"></i></i
+              ></a>
+        </div>
+        <!-- Grid column -->
+      </div>
+    </section>
+    <!-- Section: Copyright -->
+  </div>
+  <!-- Grid container -->
+</footer>
+  </footer>
+</div>

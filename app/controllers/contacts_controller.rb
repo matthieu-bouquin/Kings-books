@@ -1,21 +1,25 @@
+
 class ContactsController < ApplicationController
   def index
-  end
-  
-  def show
-  end
-
-  def edit
-  end
-
-  def update
+    @contact = Contact.new
   end
   def new
-  end
 
+  end
   def create
+   
+    @contact = Contact.create(paramsClean)
+    if @contact.save
+      redirect_back fallback_location: root_path,
+                          success: "Your message has been sent successfully"
+    end
   end
-
-  def destroy
+  def update
+    p params
+  end
+  private
+  def paramsClean
+    params.require(:contact).permit(:email, :name, :subject, :content)
   end
 end
+

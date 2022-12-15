@@ -10,30 +10,31 @@
   <div class="card-header">
     <div class="p-2 mb-1 bg-success text-white"style="border-radius: 10px 10px 10px 10px;">
 
-    <h4 style="font-size: 5em;">Log in</h4>
+    <h4 style="font-size: 2em;">Log in</h4>
   </div>
   <div class="card-body">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field form-group">
-    <%= f.label :email, style:"font-size:1.5em;" %><br />
-    <%= f.email_field :email, class:"form-control", placeholder:"Email", autofocus: true, autocomplete: "email", style:"font-size:2em;" %>
+    <%= f.label :email, style:"font-size:1em;" %><br />
+    <%= f.email_field :email, class:"form-control", placeholder:"Email", autofocus: true, autocomplete: "email", style:"font-size:1em;" %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :password, style:"font-size:1.5em;" %><br />
-    <%= f.password_field :password, class:"form-control", placeholder:"Password", autocomplete: "current-password", style:"font-size:2em;" %>
+    <%= f.label :password, style:"font-size:1em;" %><br />
+    <%= f.password_field :password, class:"form-control", placeholder:"Password", autocomplete: "current-password", style:"font-size:1em;" %>
   </div>
 
+<br>
   <% if devise_mapping.rememberable? %>
     <div class="field form-group">
-      <%= f.check_box :remember_me, class: "form-check-input", style:"font-size:2em;" %>
-      <%= f.label :remember_me , style:"font-size:1em;margin-top:0.7em;"%>
+      <%= f.check_box :remember_me, class: "form-check-input", style:"font-size:1em;" %>
+      <%= f.label :remember_me , style:"font-size:1em;margin-top:0em;"%>
     </div>
   <% end %><br>
 
   <div class="actions">
-    <%= f.submit "Log in", class:"btn btn-success text-white", style: "font-size: 2rem;margin-top:1em;margin-bottom:0.5em;" %>
+    <%= f.submit "Log in", class:"btn btn-success text-white", style: "font-size: 2rem;margin-top:1em;margin-bottom:0em;" %>
   </div>
   <br>
 <% end %>
