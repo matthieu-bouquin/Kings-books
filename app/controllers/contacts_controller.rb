@@ -1,3 +1,4 @@
+
 class ContactsController < ApplicationController
   def index
     @contact = Contact.new
@@ -21,3 +22,4 @@ class ContactsController < ApplicationController
     params.require(:contact).permit(:email, :name, :subject, :content)
   end
 end
+

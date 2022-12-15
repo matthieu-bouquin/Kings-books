@@ -1,3 +1,4 @@
+
 class UserMailer < ApplicationMailer
   default from: 'kings.books.mailer@gmail.com'
 
@@ -19,4 +20,5 @@ class UserMailer < ApplicationMailer
         mail
         mail(to: contact.email, subject: 'Thank you for your message')
       end
+
 end
