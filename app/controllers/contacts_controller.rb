@@ -1,15 +1,12 @@
 class ContactsController < ApplicationController
   def index
     @contact = Contact.new
-    p params
   end
   def new
-    p "NEW"
-    p params
+
   end
   def create
-    p "CREATE"
-    p params
+   
     @contact = Contact.create(paramsClean)
     if @contact.save
       redirect_back fallback_location: root_path,
