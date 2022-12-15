@@ -14,4 +14,9 @@ class UserMailer < ApplicationMailer
       def welcome_reset_password_instructions(user)
         mail(to: user.email, subject: 'Welcome to the New Site')
       end
+      def message_send(contact)
+        @contact = contact
+        mail
+        mail(to: contact.email, subject: 'Thank you for your message')
+      end
 end
