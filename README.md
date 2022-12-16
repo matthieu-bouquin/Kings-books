@@ -10,7 +10,7 @@ This project is an example that was build along with Youtube series showing how 
 
 ## watch this youtube video
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/GoxhRQqKtXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/watch?v=GoxhRQqKtXQ&ab_channel=mikotoTT
 
 ## how to install this project
 1. clone this project
