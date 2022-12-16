@@ -1,5 +1,5 @@
 
-# The KINGSBOOKS website
+# The KINGSBOOKS website 👋
 
 Made with Ruby On Rails
 
@@ -13,7 +13,7 @@ You can use it to have a basis for your future sales or rental wesite.
 
 In this project, there is a Stripe, a Mailer and a Devise system.
 
-## overview of the website
+## overview of the website 
 
 https://user-images.githubusercontent.com/91558933/208069640-9a210d40-18df-4a05-b000-0ffed35204ef.mp4
 
@@ -35,6 +35,9 @@ We worked on the Linux OS version
 
 Read this good github documentation:
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=codespaces
+
+## Snake animation 
+![Snake animation](https://github.com/JonathanSchafeitel/JonathanSchafeitel/blob/output/github-contribution-grid-snake.svg)
 
 ## Authors
 Name and Github:
