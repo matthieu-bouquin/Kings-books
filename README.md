@@ -36,7 +36,6 @@ We worked on the Linux OS version
 Read this good github documentation:
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=codespaces
 
-![Snake animation](https://github.com/JonathanSchafeitel/JonathanSchafeitel/blob/output/github-contribution-grid-snake.svg)
 ## Authors
 Name and Github:
 
