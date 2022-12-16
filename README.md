@@ -6,8 +6,10 @@ Made with Ruby On Rails
 ##  markbook location system
 
 Hello dear developers, here you will find a bookmark rental website created with JavaScript/html and CSS in which we have learned how to create pull requests.
+
 This is a simple code to make you understand easily. 
-You can use it to have a bases for your future sales or rental wesite.
+
+You can use it to have a basis for your future sales or rental wesite.
 
 In this project, there is a Stripe, a Mailer and a Devise system.
 
