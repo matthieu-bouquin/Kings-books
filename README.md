@@ -10,7 +10,7 @@ This project is an example that was build along with Youtube series showing how 
 
 ## watch this youtube video
 
-https://www.youtube.com/watch?v=GoxhRQqKtXQ&ab_channel=mikotoTT
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
 
 ## how to install this project
 1. clone this project
