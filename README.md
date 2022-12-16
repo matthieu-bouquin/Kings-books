@@ -3,7 +3,7 @@
 
 Made with Ruby On Rails
 
-##  markbook location system
+##  Markbook location system
 
 Hello dear developers, here you will find our final project for The Hacking Project fullstack program: a bookmark rental website created with JavaScript/html and CSS. Pull requests were actively used.
 
@@ -24,14 +24,14 @@ We worked on the Linux OS version
 - the Ruby version is 3.1.2
 - the Rails one is 7.0.4 
 
-## how to install this project
+## How to install this project
 1. clone this project
 2. make a bundle install
 3. make migrations appending with ```rails db:migrate```
 4. run a ```rails db:seed```
 5. run it with ```rails s```
 
-## how to make pull request
+## How to make pull request
 
 Read this good github documentation:
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=codespaces
