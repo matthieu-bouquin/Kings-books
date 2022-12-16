@@ -22,7 +22,7 @@ https://user-images.githubusercontent.com/91558933/208069640-9a210d40-18df-4a05-
 We worked on the Linux OS version 
 
 - the Ruby version is 3.1.2
-- the rails one is 7.0.4 
+- the Rails one is 7.0.4 
 
 ## how to install this project
 1. clone this project
