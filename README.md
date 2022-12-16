@@ -33,12 +33,12 @@ We worked on the Linux OS version
 
 ## how to make pull request
 
-read this good github documentation:
+Read this good github documentation:
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=codespaces
 
 
 ## Authors
-name and github:
+Name and Github:
 
 - Jonathan Schafeitel -> https://github.com/JonathanSchafeitel     
 - Kevin Letourneur -> https://github.com/klt56
