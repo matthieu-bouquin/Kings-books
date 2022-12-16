@@ -54,18 +54,28 @@
           <button type="button" id ="Page6" class="btn btn-primary" style= "font-size: 2rem;">Page 6</button>
           <%= content_tag :div, '', id: "variablePage6", data: {source: @page.pageSix}%>
         </div>
-        <div class="container-fluid" >
-          <div class="card mb-3 text-center" style="margin-left:10em;margin-right:10em;margin-top:1em;">
-            <div class="row">
-              <div class="col">
-                <div class="card-body" style="padding-left:8em;padding-right:8em;">
-                  <p id="textBookTitle" style="font-size:3em;">Page 1</p>
-                  <p id="textBook" style="font-size:2em;"></p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+        <div id="wrapper" style="margin-top:5em;margin-bottom:5em;">
+          <div id="container">
+
+        <section class="open-book" style="height: 50em;">
+            <header>
+                <h1><%= @book.name.capitalize %></h1>
+                <h6><%= @book.author %></h6>
+            </header>
+            <article class="" id="textBook" style="font-size:2em;">
+                <h2 id="textBookTitle" class="chapter-title"></h2>
+                
+            </article>
+            <footer>
+                <ol id="page-numbers">
+                    <li>1</li>
+                </ol>
+            </footer>
+        </section>
+
+    </div>
+</div>
       </div>
     </div>
   </main>
@@ -81,6 +91,8 @@
 
     var textBookTitle = document.getElementById("textBookTitle");
     var textBook = document.getElementById("textBook");
+   
+    
 
     var pageOneContent = document.getElementById("variablePage1").dataset.source
     var pageTwoContent = document.getElementById("variablePage2").dataset.source
