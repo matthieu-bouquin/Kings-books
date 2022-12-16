@@ -10,7 +10,10 @@ This project is an example that was build along with Youtube series showing how 
 
 ## watch this youtube video
 
-https://youtu.be/<https://www.youtube.com/embed/GoxhRQqKtXQ>
+
+https://user-images.githubusercontent.com/91558933/208069640-9a210d40-18df-4a05-b000-0ffed35204ef.mp4
+
+
 
 ## how to install this project
 1. clone this project
