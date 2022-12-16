@@ -5,7 +5,7 @@ Made with Ruby On Rails
 
 ##  markbook location system
 
-Hello dear developers, here you will find our last project for The Hacking Project: a bookmark rental website created with JavaScript/html and CSS. We have learned how to create pull requests.
+Hello dear developers, here you will find our final project for The Hacking Project fullstack program: a bookmark rental website created with JavaScript/html and CSS. Pull requests were actively used.
 
 This is a simple code to make you understand easily. 
 
