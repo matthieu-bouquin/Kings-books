@@ -5,24 +5,36 @@ Made with Ruby On Rails
 
 ##  markbook location system
 
-This project is an example that was build along with Youtube series showing how to insert a javascript system to make books pages connected to buttons. Every part of this project is a sample code whic shows how to do th following:
-- create a system to link pages to button pages
-- create a stripe
+Hello dear developers, here you will find a bookmark rental website created with JavaScript/html and CSS in which we have learned how to create pull requests.
+This is a simple code to make you understand easily. 
+You can use it to have a bases for your future sales or rental wesite.
 
-## watch this youtube video
+In this project, there is a Stripe, a Mailer and a Devise system.
 
+## overview of the website
 
 https://user-images.githubusercontent.com/91558933/208069640-9a210d40-18df-4a05-b000-0ffed35204ef.mp4
 
+## Dependencies
 
+We worked on the Linux OS version 
+
+the Ruby version is 3.1.2
+the rails one is 7.0.4 
 
 ## how to install this project
 1. clone this project
 2. make a bundle install
 3. make migrations appending with "rails db:migrate"
-4. lance le avec "rails s"
+4. run it with "rails s"
 
-# Authors
+## how to make pull request
+
+read this github really good documentation
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=codespaces
+
+
+## Authors
 name and github:
 
 - Jonathan Schafeitel -> https://github.com/JonathanSchafeitel     
