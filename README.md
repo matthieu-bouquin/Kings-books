@@ -5,7 +5,7 @@ Made with Ruby On Rails
 
 ##  markbook location system
 
-Hello dear developers, here you will find a bookmark rental website created with JavaScript/html and CSS in which we have learned how to create pull requests.
+Hello dear developers, here you will find our last project for The Hacking Project: a bookmark rental website created with JavaScript/html and CSS. We have learned how to create pull requests.
 
 This is a simple code to make you understand easily. 
 
@@ -27,8 +27,9 @@ We worked on the Linux OS version
 ## how to install this project
 1. clone this project
 2. make a bundle install
-3. make migrations appending with "rails db:migrate"
-4. run it with "rails s"
+3. make migrations appending with ```rails db:migrate```
+4. run a ```rails db:seed```
+5. run it with ```rails s```
 
 ## how to make pull request
 
