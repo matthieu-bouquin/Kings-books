@@ -1,23 +1,51 @@
-<<<<<<< HEAD
 
-<h1>Hello <%= @user.email %> and welcome to Kings Books !</h1>
-<p> You registered on Kings Books using the following email: <%= @user.email %>.</p>
-<p>To access your customer area, log in: <%= @url %>.</p>
-<p>See you soon on Kings Books </p>
-<p>---------------------------------------------------------------------------------</p>
-<h1>Salut <%= @user.email %> et bienvenue chez Kings Books !</h1>
-<p>Tu t'es inscrit sur Kings Books en utilisant l'e-mail suivant : <%= @user.email %>.</p>
-<p> Pour accéder à ton espace client, connecte-toi via : <%= @url %>.</p>
-<p> À très vite sur Kings Books </p>
-=======
 
-<h1>Hello <%= @user.email %> and welcome to Kings Books !</h1>
-<p> You registered on Kings Books using the following email: <%= @user.email %>.</p>
-<p>To access your customer area, log in: <%= @url %>.</p>
-<p>See you soon on Kings Books </p>
-<p>---------------------------------------------------------------------------------</p>
-<h1>Salut <%= @user.email %> et bienvenue chez Kings Books !</h1>
-<p>You registered with Kings Books using the following email: <%= @user.email %>.</p>
-<p>To access your customer area, log in via: <%= @url %>.</p>
-<p>See you soon on Kings Books </p>
->>>>>>> 744f54b8d0969b2eeb9be04bec0a0359edefbfa4
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Mailer</title>
+  <link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:20%;
+}
+
+.container{
+    margin-left:20%;
+    margin-right:20%;
+}
+
+
+</style>
+
+  </head>
+  <body>
+<center>
+
+  <img src="https://previews.123rf.com/images/photoworld/photoworld1908/photoworld190800042/128715164-science-and-education-open-book-on-a-horizontal-pile-group-of-colorfull-books-on-the-wooden-table-an.jpg" alt="KingsBooks" width="50%" height="200">
+
+    <div class="container">
+       <h1 style="color:#333"> Topic post </h1>
+ 
+          <hr width="120px" color="#333">
+            <p>
+            <p><h1>Hello <%= @user.email %> and welcome to Kings Books !</h1></p>
+            <p> You registered on Kings Books using the following email: <%= @user.email %>.</p>
+            </p>
+            <p>
+                <p>To access your customer area, log in: <%= @url %>.</p>
+            </p>
+            <p>
+                <p>See you soon on Kings Books </p>
+            </p>
+            <hr width="120px" color="#333">
+            <p>
+              Check out the KingsBooks website : <a href="https://kingsbooks.herokuapp.com/">KingsBooks </a>
+            </p>
+    </div>
+    </center>
+  </body>
+</html>

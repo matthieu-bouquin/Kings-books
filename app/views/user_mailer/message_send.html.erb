@@ -1,3 +1,49 @@
-<p>Salut <%= @contact.email %> et merci pour ton message chez Kings Books !</p>
-<p>Voici le message que tu as écrit <%= @contact.content %>.</p>
-<p>A bientôt</p>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Mailer</title>
+  <link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:20%;
+}
+
+.container{
+    margin-left:20%;
+    margin-right:20%;
+}
+
+
+</style>
+
+  </head>
+  <body>
+<center>
+
+  <img src="https://previews.123rf.com/images/photoworld/photoworld1908/photoworld190800042/128715164-science-and-education-open-book-on-a-horizontal-pile-group-of-colorfull-books-on-the-wooden-table-an.jpg" alt="KingsBooks" width="50%" height="200">
+
+    <div class="container">
+       <h1 style="color:#333"> Topic post </h1>
+ 
+          <hr width="120px" color="#333">
+            <p>
+            <p><h3>Hey <%= @contact.email %></p>
+            <p>Here the text you wrote: "<%= @contact.content %>".</p>
+            </p>
+            <p>
+            We are grateful to you for leaving a comment. We hope you enjoyed the website.</h2>
+            </p>
+            <p>
+              <h3>See you soon !</h3> 
+            </p>
+            <hr width="120px" color="#333">
+            <p>
+              Check out the KingsBooks website : <a href="https://kingsbooks.herokuapp.com/">KingsBooks </a>
+            </p>
+    </div>
+    </center>
+  </body>
+</html>
