@@ -32,7 +32,7 @@ the rails one is 7.0.4
 
 ## how to make pull request
 
-read this github really good documentation
+read this good github documentation:
 https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=codespaces
 
 
