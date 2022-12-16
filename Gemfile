@@ -17,7 +17,7 @@ gem 'htmlbeautifier'
 gem "sprockets-rails"
 gem 'prawn'
 gem 'gon'
-
+gem "meta-tags"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
